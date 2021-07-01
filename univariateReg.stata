@@ -1,0 +1,13 @@
+insheet using "/Users/keshen/Desktop/covidR_(3.21).csv"
+encode gender, gen(gender_ )
+encode employed_situation  , gen(employed_situation_ )
+encode trust_in_government    , gen(trust_in_government_ )
+encode party, gen(party_ )
+logistic vaccine i.employed_situation_
+logistic vaccine i.gender_
+logistic vaccine i.trust_in_government_
+logistic vaccine i.education
+logistic vaccine i.annual_household_income
+logistic vaccine i.age_category
+logistic vaccine i.ethnicity
+logistic vaccine i.party_
